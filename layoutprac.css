@@ -1,0 +1,26 @@
+h3.numbered {counter-reset: mynum;}
+ul.info1{
+    list-style: upper-latin;
+}
+ul.info2{
+    list-style:upper-alpha;
+}
+ul.info3{
+    list-style: upper-roman;
+}
+p.numbered:before {
+    content: counter(mynum) ": ";
+    counter-increment: mynum;
+    font-weight: bold;
+}
+
+ul, #numbered {
+    border: 1em solid #69b;
+    padding-right:1em;
+}
+h3 {
+    border-top: 1px solid gray;
+    text-align: center;
+}
+ul, #numbered {float: left;clear: right;}
+h3 {clear: right;}
